@@ -1,3 +1,4 @@
+
 pipeline {
   agent any
   environment {
@@ -14,6 +15,7 @@ pipeline {
         echo "welcome ${name}"
         echo "you enrolled for ${course} course"
         echo "you are certified in ${cloud}"
+        sh 'printenv'
       }
     } 
   }
