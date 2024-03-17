@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('this is agent any pipeline')  {
       steps {
-        echo "welcom to jenkins hotfix brnach"
+        echo "welcom to jenkins wiki brnach"
         sh 'hostname -i'
       }
     }
