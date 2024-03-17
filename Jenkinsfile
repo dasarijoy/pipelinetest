@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('env-stage') {
       environment {
-      name = vanitha
+      name = "vanitha"
       cloud = "GCP"
       }
       steps {
