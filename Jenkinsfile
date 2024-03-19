@@ -1,22 +1,16 @@
-
 pipeline {
-  agent any
+  agent any 
   environment {
-    course ="jenkins"
-    name = "Dileep"
+    DEPLOY_TO = 'production'
   }
   stages {
-    stage('env-stage') {
-      environment {
-      name = "vanitha"
-      cloud = "GCP"
+    stage ("when-ex") {
+      when {
+        environment name: 'DEPLOY_TO' , value: 'production'
       }
       steps {
-        echo "welcome ${name}"
-        echo "you enrolled for ${course} course"
-        echo "you are certified in ${cloud}"
-        sh 'printenv'
+        echo "deploy to jenkins"
       }
-    } 
+    }
   }
 }
