@@ -9,7 +9,7 @@ pipeline {
         environment name: 'DEPLOY_TO' , value: 'production'
       }
       steps {
-        echo "deploy to jenkins"
+        echo "deploy to jenkins local host"
       }
     }
   }
